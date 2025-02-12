@@ -6,16 +6,16 @@
 #    By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/10 17:01:41 by sadoming          #+#    #+#              #
-#    Updated: 2025/02/12 18:00:57 by sadoming         ###   ########.fr        #
+#    Updated: 2025/02/12 19:44:59 by sadoming         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:= ScavTrap
+NAME	:= DiamondTrap
 # ------------------ #
 # Flags:
 
 CC		:= c++
-CFLAGS	:= -Wall -Wextra -Werror -std=c++98 -g -c #-fsanitize=address
+CFLAGS	:= -Wall -Wextra -Werror -std=c++98 -g -c -Wshadow -Wno-shadow -fsanitize=address
 # ------------------- #
 # Colors
 
@@ -41,7 +41,7 @@ OBJ_DIR		:=	./obj
 MAK	:= Makefile
 HDR	:= $(INC_DIR)/ # Headers
 
-SRC_SRC := main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC_SRC := main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 SRC := $(addprefix $(SRC_DIR), $(SRC_SRC))
 

@@ -6,11 +6,11 @@
 #    By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/10 17:01:41 by sadoming          #+#    #+#              #
-#    Updated: 2025/02/12 18:00:57 by sadoming         ###   ########.fr        #
+#    Updated: 2025/02/12 19:15:32 by sadoming         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	:= ScavTrap
+NAME	:= FragTrap
 # ------------------ #
 # Flags:
 
@@ -41,7 +41,7 @@ OBJ_DIR		:=	./obj
 MAK	:= Makefile
 HDR	:= $(INC_DIR)/ # Headers
 
-SRC_SRC := main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC_SRC := main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 SRC := $(addprefix $(SRC_DIR), $(SRC_SRC))
 

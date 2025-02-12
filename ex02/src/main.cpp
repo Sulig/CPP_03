@@ -6,12 +6,13 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:35:41 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/12 19:04:26 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/12 19:21:25 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
@@ -19,6 +20,7 @@ int main()
 	// Create a claptrap
 	ClapTrap claptrap("Claptrap");
 
+	// Test some actions
 	claptrap.attack("Bandit");
 	claptrap.takeDamage(5);
 	claptrap.beRepaired(10);
@@ -41,6 +43,7 @@ int main()
 	// Create a scavtrap
 	ScavTrap	scavtrap("Scavtrap");
 
+	// Test some actions
 	scavtrap.attack("Bandit");
 	scavtrap.takeDamage(5);
 	scavtrap.beRepaired(10);
@@ -59,6 +62,30 @@ int main()
 
 	// Try to repair the scavtrap
 	scavtrap.beRepaired(10);
+	/*--------------*/
+
+	/* FragTrap */
+	// Create a fragtrap
+	FragTrap	fragtrap("Fragtrap");
+
+	// Test some actions
+	fragtrap.attack("Bandit");
+	fragtrap.takeDamage(5);
+	fragtrap.beRepaired(10);
+	fragtrap.highFivesGuys();
+
+	// Agote the fragtrap
+	for (int i = 0; i < 10; i++) {
+		fragtrap.attack("Mouseering");
+		fragtrap.takeDamage(1);
+		fragtrap.beRepaired(1);
+	}
+
+	// Kill the fragtrap
+	fragtrap.takeDamage(1000);
+
+	// Try to repair the fragtrap
+	fragtrap.beRepaired(10);
 	/*--------------*/
 	return 0;
 }
