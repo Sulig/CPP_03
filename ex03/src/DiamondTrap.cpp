@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Diamondtrap.cpp                                    :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 19:30:59 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/12 19:58:41 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/13 18:59:33 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ DiamondTrap::DiamondTrap(void)
 	std::cout << "DiamondTrap constructor called" << std::endl;
 	this->_type = "DiamondTrap ";
 	this->_name = "Diamondtrap";
+	ClapTrap::_name = this->_name + SUFFIX;
 	this->_hitpoints = FragTrap::_hitpoints;
 	this->_energyPoints = ScavTrap::_energyPoints;
 	this->_attackDamage = FragTrap::_attackDamage;
@@ -28,6 +29,7 @@ DiamondTrap::DiamondTrap(std::string name)
 	std::cout << "DiamondTrap constructor called" << std::endl;
 	this->_type = "DiamondTrap ";
 	this->_name = name;
+	ClapTrap::_name = this->_name + SUFFIX;
 	this->_hitpoints = FragTrap::_hitpoints;
 	this->_energyPoints = ScavTrap::_energyPoints;
 	this->_attackDamage = FragTrap::_attackDamage;
@@ -59,8 +61,14 @@ DiamondTrap::~DiamondTrap()
 /* ----- */
 
 /* Actions */
+void	DiamondTrap::attack(std::string const &target)
+{
+	ScavTrap::attack(target);
+}
 void	DiamondTrap::whoAmI(void)
 {
+	std::cout << COLOR << "";
 	std::cout << "I am " << this->_name << " and my ClapTrap name is " << ClapTrap::_name << std::endl;
+	std::cout << RESET << "";
 }
 /* ----- */

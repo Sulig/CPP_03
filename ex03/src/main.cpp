@@ -6,13 +6,14 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:35:41 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/12 19:21:25 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/13 19:08:06 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
@@ -50,13 +51,6 @@ int main()
 	scavtrap.guardGate();
 	scavtrap.guardGate();
 
-	// Agote the scavtrap
-	for (int i = 0; i < 10; i++) {
-		scavtrap.attack("Mouseering");
-		scavtrap.takeDamage(1);
-		scavtrap.beRepaired(1);
-	}
-
 	// Kill the scavtrap
 	scavtrap.takeDamage(1000);
 
@@ -74,18 +68,30 @@ int main()
 	fragtrap.beRepaired(10);
 	fragtrap.highFivesGuys();
 
-	// Agote the fragtrap
-	for (int i = 0; i < 10; i++) {
-		fragtrap.attack("Mouseering");
-		fragtrap.takeDamage(1);
-		fragtrap.beRepaired(1);
-	}
-
 	// Kill the fragtrap
 	fragtrap.takeDamage(1000);
 
 	// Try to repair the fragtrap
 	fragtrap.beRepaired(10);
+	/*--------------*/
+
+	/* DiamondTrap */
+	// Create a diamondtrap
+	DiamondTrap	diamondtrap("Diferent Diamondtrap");
+
+	// Test some actions
+	diamondtrap.attack("Bandit");
+	diamondtrap.takeDamage(5);
+	diamondtrap.beRepaired(10);
+	diamondtrap.highFivesGuys();
+	diamondtrap.guardGate();
+	diamondtrap.whoAmI();
+
+	// Kill the diamondtrap
+	diamondtrap.takeDamage(1000);
+
+	// Try to repair the diamondtrap
+	diamondtrap.beRepaired(10);
 	/*--------------*/
 	return 0;
 }

@@ -6,7 +6,7 @@
 #    By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/10 17:01:41 by sadoming          #+#    #+#              #
-#    Updated: 2025/02/12 19:44:59 by sadoming         ###   ########.fr        #
+#    Updated: 2025/02/13 18:50:46 by sadoming         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME	:= DiamondTrap
 # Flags:
 
 CC		:= c++
-CFLAGS	:= -Wall -Wextra -Werror -std=c++98 -g -c -Wshadow -Wno-shadow -fsanitize=address
+CFLAGS	:= -Wall -Wextra -Werror -std=c++98 -g -c -Wshadow -Wno-shadow #-fsanitize=address
 # ------------------- #
 # Colors
 

@@ -6,7 +6,7 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 19:29:32 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/12 19:36:56 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/13 19:00:25 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
+
+# define SUFFIX		"_clap_name"
+# define COLOR		"\033[38;5;166m"
 
 class	DiamondTrap : public ScavTrap, public FragTrap
 {
@@ -25,6 +28,7 @@ class	DiamondTrap : public ScavTrap, public FragTrap
 		DiamondTrap	&operator=(DiamondTrap const &rhs);
 		~DiamondTrap();
 
+		void	attack(std::string const &target);
 		void	whoAmI(void);
 
 	private:

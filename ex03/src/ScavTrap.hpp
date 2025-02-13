@@ -6,7 +6,7 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 19:48:19 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/12 18:49:47 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/13 17:33:39 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # define B_CYAN		"\033[1;36m"
 # define B_WHITE	"\033[1;37m"
 
-class	ScavTrap : public ClapTrap
+class	ScavTrap : virtual public ClapTrap
 {
 	public:
 		ScavTrap(void);
