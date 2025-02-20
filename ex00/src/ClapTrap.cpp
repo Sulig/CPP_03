@@ -6,7 +6,7 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:35:57 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/11 19:35:56 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/20 18:56:22 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /* Constructor & destructor */
 ClapTrap::ClapTrap(void)
 {
-	std::cout << "Claptrap constructor called" << std::endl;
+	std::cout << "Claptrap default constructor called" << std::endl;
 	this->_name = "Claptrap";
 	this->_hitpoints = 10;
 	this->_energyPoints = 10;

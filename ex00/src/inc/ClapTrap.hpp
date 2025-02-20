@@ -6,7 +6,7 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:36:10 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/11 19:24:42 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/20 18:55:01 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class	ClapTrap
 		ClapTrap	&operator=(ClapTrap const &rhs);
 		~ClapTrap();
 
-		void	attack(std::string const & target);
+		void	attack(const std::string& target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 

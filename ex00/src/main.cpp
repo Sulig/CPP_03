@@ -6,11 +6,11 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:35:41 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/11 19:33:30 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/20 18:49:12 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "inc/ClapTrap.hpp"
 
 int main()
 {
