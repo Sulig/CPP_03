@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:35:57 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/20 18:56:22 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/25 16:29:28 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "inc/ClapTrap.hpp"
 
 /* Constructor & destructor */
 ClapTrap::ClapTrap(void)

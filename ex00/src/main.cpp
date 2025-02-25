@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:35:41 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/20 18:49:12 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/25 16:35:22 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 int main()
 {
 	ClapTrap claptrap("Claptrap");
+	ClapTrap claptrap2(claptrap); // Copy constructor
+	ClapTrap claptrap3 = claptrap; // Copy asignation operator
 
 	claptrap.attack("Bandit");
+	// On real case, the damage will get the target and it would inflict damage itself
 	claptrap.takeDamage(5);
 	claptrap.beRepaired(10);
 
