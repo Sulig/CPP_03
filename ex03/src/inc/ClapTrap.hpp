@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:36:10 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/12 17:25:00 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/25 17:53:22 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ class	ClapTrap
 		void	beRepaired(unsigned int amount);
 
 	protected:
-		std::string	_type;
 		std::string	_name;
+		std::string	_type;
 		int			_hitpoints;
 		int			_energyPoints;
 		int			_attackDamage;

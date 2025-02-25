@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 19:30:59 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/13 18:59:33 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/25 18:00:23 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#include "inc/DiamondTrap.hpp"
 
 /* Constructor & destructor */
-DiamondTrap::DiamondTrap(void)
+DiamondTrap::DiamondTrap(void) : ClapTrap(), ScavTrap(), FragTrap()
 {
 	std::cout << "DiamondTrap constructor called" << std::endl;
 	this->_type = "DiamondTrap ";
@@ -24,7 +24,7 @@ DiamondTrap::DiamondTrap(void)
 	this->_attackDamage = FragTrap::_attackDamage;
 	return ;
 }
-DiamondTrap::DiamondTrap(std::string name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), ScavTrap(name), FragTrap(name)
 {
 	std::cout << "DiamondTrap constructor called" << std::endl;
 	this->_type = "DiamondTrap ";
@@ -35,7 +35,7 @@ DiamondTrap::DiamondTrap(std::string name)
 	this->_attackDamage = FragTrap::_attackDamage;
 	return ;
 }
-DiamondTrap::DiamondTrap(DiamondTrap const &src)
+DiamondTrap::DiamondTrap(DiamondTrap const &src) : ClapTrap(src), ScavTrap(src), FragTrap(src)
 {
 	std::cout << "DiamondTrap copy constructor called" << std::endl;
 	*this = src;

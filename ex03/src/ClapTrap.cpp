@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:35:57 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/12 18:01:41 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/25 17:52:49 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "inc/ClapTrap.hpp"
 
 /* Constructor & destructor */
 ClapTrap::ClapTrap(void)
 {
-	std::cout << "Claptrap constructor called" << std::endl;
-	this->_type = "ClapTrap ";
+	std::cout << "Claptrap default constructor called" << std::endl;
 	this->_name = "Claptrap";
 	this->_hitpoints = 10;
 	this->_energyPoints = 10;
@@ -26,7 +25,6 @@ ClapTrap::ClapTrap(void)
 ClapTrap::ClapTrap(std::string name)
 {
 	std::cout << "Claptrap constructor called" << std::endl;
-	this->_type = "ClapTrap ";
 	this->_name = name;
 	this->_hitpoints = 10;
 	this->_energyPoints = 10;
@@ -59,7 +57,7 @@ ClapTrap::~ClapTrap()
 /* ----- */
 
 /* Actions */
-void	ClapTrap::attack(std::string const & target)
+void ClapTrap::attack(std::string const & target)
 {
 	if (_hitpoints == 0)
 	{
@@ -84,7 +82,7 @@ void	ClapTrap::attack(std::string const & target)
 	}
 }
 
-void	ClapTrap::takeDamage(unsigned int amount)
+void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (_hitpoints == 0)
 	{
@@ -107,7 +105,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	}
 }
 
-void	ClapTrap::beRepaired(unsigned int amount)
+void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (_hitpoints == 0)
 	{

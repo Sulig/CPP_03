@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 19:48:02 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/12 19:03:32 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/25 17:52:17 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ScavTrap.hpp"
+# include "inc/ScavTrap.hpp"
 
 /* Constructor & destructor */
-ScavTrap::ScavTrap(void)
+ScavTrap::ScavTrap(void) : ClapTrap()
 {
 	std::cout << "Scavtrap constructor called" << std::endl;
 	this->_type = "ScavTrap ";
@@ -24,7 +24,7 @@ ScavTrap::ScavTrap(void)
 	this->_isGuardGate = false;
 	return ;
 }
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "Scavtrap constructor called" << std::endl;
 	this->_type = "ScavTrap ";
@@ -35,7 +35,7 @@ ScavTrap::ScavTrap(std::string name)
 	this->_isGuardGate = false;
 	return ;
 }
-ScavTrap::ScavTrap(ScavTrap const &src)
+ScavTrap::ScavTrap(ScavTrap const &src) : ClapTrap(src)
 {
 	std::cout << "Scavtrap copy constructor called" << std::endl;
 	*this = src;

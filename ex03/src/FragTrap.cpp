@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 19:08:03 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/12 19:19:40 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/25 17:51:49 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "inc/FragTrap.hpp"
 
 /* Constructor & destructor */
-FragTrap::FragTrap(void)
+FragTrap::FragTrap(void) : ClapTrap()
 {
 	std::cout << "Fragtrap constructor called" << std::endl;
 	this->_type = "FragTrap ";
@@ -23,7 +23,7 @@ FragTrap::FragTrap(void)
 	this->_attackDamage = 30;
 	return ;
 }
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "Fragtrap constructor called" << std::endl;
 	this->_type = "FragTrap ";
@@ -33,7 +33,7 @@ FragTrap::FragTrap(std::string name)
 	this->_attackDamage = 30;
 	return ;
 }
-FragTrap::FragTrap(FragTrap const &src)
+FragTrap::FragTrap(FragTrap const &src) : ClapTrap(src)
 {
 	std::cout << "Fragtrap copy constructor called" << std::endl;
 	*this = src;
