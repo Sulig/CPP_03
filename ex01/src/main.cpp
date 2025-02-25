@@ -3,23 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:35:41 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/12 19:04:26 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/25 17:35:05 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "inc/ClapTrap.hpp"
+#include "inc/ScavTrap.hpp"
 
-int main()
+void	clapTrapTests()
 {
 	/* ClapTrap */
+	std::cout << RESET;
+	std::cout << "----------- ClapTrap -------------" << std::endl;
 	// Create a claptrap
 	ClapTrap claptrap("Claptrap");
+	ClapTrap claptrap2(claptrap); // Copy constructor
+	ClapTrap claptrap3 = claptrap; // Copy asignation operator
 
 	claptrap.attack("Bandit");
+	// On real case, the damage will get the target and it would inflict damage itself
 	claptrap.takeDamage(5);
 	claptrap.beRepaired(10);
 
@@ -36,10 +41,18 @@ int main()
 	// Try to repair the claptrap
 	claptrap.beRepaired(10);
 	/*--------------*/
+	std::cout << "----------- ClapTrap End -------------" << std::endl;
+	std::cout << RESET << std::endl;
+}
 
+void	scavTrapTests()
+{
 	/* ScavTrap */
+	std::cout << "----------- ScavTrap -------------" << std::endl;
 	// Create a scavtrap
 	ScavTrap	scavtrap("Scavtrap");
+	ScavTrap	scavtrap2(scavtrap); // Copy constructor
+	ScavTrap	scavtrap3 = scavtrap; // Copy asignation operator
 
 	scavtrap.attack("Bandit");
 	scavtrap.takeDamage(5);
@@ -60,5 +73,13 @@ int main()
 	// Try to repair the scavtrap
 	scavtrap.beRepaired(10);
 	/*--------------*/
+	std::cout << "----------- ScavTrap End -------------" << std::endl;
+	std::cout << RESET << std::endl;
+}
+
+int main()
+{
+	clapTrapTests();
+	scavTrapTests();
 	return 0;
 }

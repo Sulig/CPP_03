@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 19:48:02 by sadoming          #+#    #+#             */
-/*   Updated: 2025/02/20 19:00:31 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/02/25 17:25:17 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ScavTrap.hpp"
+# include "inc/ScavTrap.hpp"
 
 /* Constructor & destructor */
 ScavTrap::ScavTrap(void) : ClapTrap()
